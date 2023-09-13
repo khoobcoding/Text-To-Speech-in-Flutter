@@ -1,3 +1,21 @@
+dependencies:
+  cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+  flutter_tts: ^3.7.0  // Add this package for using Text to Speech
+  avatar_glow: ^2.0.2  // Add this package to add glow effect while talking
+
+/// In build.gradle
+defaultConfig {
+        minSdkVersion 21    // Change to 21 or above
+
+// add this permission in your androidmanifest.xml file
+<queries>
+    <intent>
+        <action android:name="android.intent.action.TTS_SERVICE" />
+    </intent>
+</queries>
+
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
